@@ -1,0 +1,104 @@
+*
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: Raleway;
+    --ff-secondary: Source Code Pro;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --color-light: #fff;
+    --color-dark: #303030;
+    --color-accent: #d3ffce;
+    --color-emph: #ff7373;
+
+    --fsizesitetitle: 48;
+    --fsizemaintitle: 32;
+    --fsizemainbody: 14;
+}
+
+@media (min-width: 600px) {
+   .intro {
+    vertical-align: top;
+    width: min-content;
+    height: 300px;
+    margin-top: 0;
+    margin: 0 auto;
+    font-size: 22px;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+        "img title"
+        "img subtitle";
+    grid-template-columns: min-content max-content;
+   } 
+
+   #img {
+    grid-area: img;
+    min-width: 300px;
+   }
+}
+
+body {
+    background: var(--color-accent);
+    color: var(--color-dark);
+    margin: 4;
+    font-family: var(--ff-primary);
+    line-height: 1.2;
+}
+
+nav {
+    font-size: 60px;
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+.intro {
+    position: relative;
+}
+
+#title {
+    font-size: 48px;
+    text-align: center;
+    font-family: Source Code Pro;
+}
+
+#title:hover {
+    color: steelblue;
+}
+
+#personalIntro {
+    text-align: center;
+    font-family: Raleway;
+    font-weight: var(--fw-reg);
+}
+
+strong {
+    font-size: 44px;
+    font-style: italic;
+    font-weight: var(--fw-bold);
+}
+
+#personalIntro strong {
+    display: block;
+}
+
+.aboutMe {
+    font-family: var(--ff-primary);
+}
+
+.aboutmeIndiv > h3 {
+    background-color: var(--color-emph);
+}
