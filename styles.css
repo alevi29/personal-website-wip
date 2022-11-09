@@ -15,6 +15,7 @@
     --color-dark: #303030;
     --color-accent: #d3ffce;
     --color-emph: #ff7373;
+    --color-loadlight: #9cbab4;
 
     --fsizesitetitle: 48;
     --fsizemaintitle: 32;
@@ -64,6 +65,27 @@ img {
 
 section {
     padding: 5em 2em;
+}
+
+.loading {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: var(--color-loadlight);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.loadingFill {
+    width: 50%;
+    height: 100%;
+    background-color: steelblue;
+} 
+
+.loadingText {
+    position: absolute;
+    top: 0;
+    right: 5px;
 }
 
 .intro {
@@ -127,7 +149,12 @@ section {
 }
 
 .nav-open .icon {
-    transform: rotate(0.5turn);
+    transform: rotate(0.625turn);
+}
+
+.nav-open .icon::before {
+    transform: rotate(90deg) translateX(-6px); 
+
 }
 
 .nav-open .icon::after {
